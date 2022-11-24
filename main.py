@@ -23,7 +23,7 @@ class Calculator:
     def get_today_stats(self):
         today_stats = 0
         # Нужно обратить внимание, что название переменной начинается с заглавной буквы, такие названия мы используем
-        # в именах класса, обычные переменные так называть не рекомендуется
+        # в именах класса, обычные переменные так называть не рекомендуется по PEP8
         for Record in self.records:
             if Record.date == dt.datetime.now().date():
                 today_stats = today_stats + Record.amount
@@ -50,7 +50,7 @@ class CaloriesCalculator(Calculator):
             return f'Сегодня можно съесть что-нибудь' \
                    f' ещё, но с общей калорийностью не более {x} кКал'
         else:
-            # Тут не нужны скобки обратите внимание на return в блоке if
+            # Тут не нужны скобки обратите внимание на return в блоке if, так же можно опустить блок else
             return('Хватит есть!')
 
 
